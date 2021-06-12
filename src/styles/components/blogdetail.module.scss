@@ -1,0 +1,43 @@
+.article_wrapper {
+  .card_container {
+    text-align: center;
+    .card_image {
+    }
+    .card_content {
+      .card_category_link {
+        text-decoration: none;
+        .card_category {
+          color: blue;
+        }
+      }
+      .card_publish_at {
+        color: green;
+        .message {
+          color: red;
+          padding-left: 10px;
+        }
+      }
+      .card_update_at {
+        color: grey;
+        .message {
+          color: red;
+          padding-left: 10px;
+        }
+      }
+      .card_title {
+        color: red;
+      }
+      .card_description {
+        color: yellowgreen;
+      }
+    }
+    /* wysiwyg editor */
+    .card_wysiwyg {
+      margin-top: 40px;
+      h1 {
+        color: green;
+      }
+    }
+    /* //wysiwyg editor */
+  }
+}
