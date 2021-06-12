@@ -20,3 +20,6 @@ yarn-error.log*
 
 # static files
 /out
+
+# eslint
+.eslintcache
