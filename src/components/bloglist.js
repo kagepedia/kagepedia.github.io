@@ -1,3 +1,5 @@
+import dateformat from "@/utils/date";
+import nl2br from "@/utils/filter";
 import styles from "@/styles/components/bloglist.module.scss";
 
 const BlogDetail = ({
@@ -18,7 +20,9 @@ const BlogDetail = ({
           </div>
         </a>
         <div className={styles.card_content}>
-          <p className={styles.card_publish_at}>{published_at}</p>
+          <p className={styles.card_publish_at}>
+            {dateformat(published_at, "YYYY-MM-DD")}
+          </p>
           {categories.map((category) => (
             <a
               key={category.id}
@@ -31,7 +35,7 @@ const BlogDetail = ({
           <h3 className={styles.card_title}>
             <a href={`/blog/${id}`}>{title}</a>
           </h3>
-          <p className={styles.card_description}>{description}</p>
+          <p className={styles.card_description}>{nl2br(description)}</p>
         </div>
       </article>
     </div>
