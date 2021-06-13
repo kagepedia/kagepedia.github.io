@@ -8,11 +8,9 @@ const Page = ({ posts }) => {
     <div>
       <Head title="Page" />
       <Nav />
-      {/* TOP CONTENTS */}
       <div>
-        <h1 className={styles.title}>ページャーが入ります</h1>
+        <h1 className={styles.title}>ブログ一覧</h1>
       </div>
-      {/* article_wrapper */}
       {posts.map((post) => (
         <BlogList
           key={post.id}
@@ -21,12 +19,9 @@ const Page = ({ posts }) => {
           title={post.title}
           categories={post.categories}
           published_at={post.publishedAt}
-          updated_at={post.updatedAt}
           description={post.description}
         />
       ))}
-      {/* // article_wrapper */}
-      {/* // TOP CONTENTS */}
     </div>
   );
 };

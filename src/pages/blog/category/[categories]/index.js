@@ -8,11 +8,9 @@ const CategoryList = ({ posts }) => {
     <div>
       <Head title="Categorylists" />
       <Nav />
-      {/* TOP CONTENTS */}
       <div>
         <h1 className={styles.title}>カテゴリー一覧</h1>
       </div>
-      {/* article_wrapper */}
       {posts.map((post) => (
         <BlogList
           key={post.id}
@@ -21,12 +19,9 @@ const CategoryList = ({ posts }) => {
           title={post.title}
           categories={post.categories}
           published_at={post.publishedAt}
-          updated_at={post.updatedAt}
           description={post.description}
         />
       ))}
-      {/* // article_wrapper */}
-      {/* // TOP CONTENTS */}
     </div>
   );
 };

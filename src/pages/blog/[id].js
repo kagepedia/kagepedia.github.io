@@ -8,23 +8,18 @@ const BlogDetails = ({ post }) => {
     <div>
       <Head title="BlogDetail" />
       <Nav />
-      {/* TOP CONTENTS */}
       <div>
-        <h1 className={styles.title}>タイトルが入ります</h1>
+        <h1 className={styles.title}>{post.title}</h1>
       </div>
-      {/* article_wrapper */}
       <BlogDetail
         id={post.id}
         thumbnail_url={post.thumbnail.url}
         title={post.title}
         categories={post.categories}
         published_at={post.publishedAt}
-        updated_at={post.updatedAt}
         description={post.description}
         content={post.content}
       />
-      {/* // article_wrapper */}
-      {/* // TOP CONTENTS */}
     </div>
   );
 };

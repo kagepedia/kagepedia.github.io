@@ -1,8 +1,6 @@
 @import "../variables";
 
 .title {
-  color: aqua;
-  @include mq(md) {
-    color: pink;
-  }
+  text-align: center;
+  margin: 20px 0;
 }

@@ -1,16 +1,14 @@
-import Head from "../components/head";
-import Nav from "../components/nav";
-import BlogList from "../components/bloglist";
-import styles from "../styles/layouts/top.module.scss";
+import Head from "@/components/head";
+import Nav from "@/components/nav";
+import BlogList from "@/components/bloglist";
+import styles from "@/styles/layouts/top.module.scss";
 
 const Home = ({ posts }) => {
   return (
     <div>
       <Head title="TOP" />
       <Nav />
-      {/* TOP CONTENTS */}
-      <h1 className={styles.title}>タイトルが入ります</h1>
-      {/* article_wrapper */}
+      <h1 className={styles.title}>TOPページ</h1>
       {posts.map((post) => (
         <BlogList
           key={post.id}
@@ -19,12 +17,9 @@ const Home = ({ posts }) => {
           title={post.title}
           categories={post.categories}
           published_at={post.publishedAt}
-          updated_at={post.updatedAt}
           description={post.description}
         />
       ))}
-      {/* // article_wrapper */}
-      {/* // TOP CONTENTS */}
     </div>
   );
 };
